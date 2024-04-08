@@ -36,19 +36,22 @@
         let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
         let busyDays = ["Monday", "Thursday", "Friday"];
       
-       function getDayWeek(){
+  
             for (const i of days) {
              let div = document.createElement("div");
-             div.classList = "busy-day";
-             div.textContent = i;
-             document.body.append(div)
+             div.textContent = i ;
+             document.body.append(div) 
+               for(const j of busyDays){
+                   if( j == i){
+                     div.classList = "busy-day";
+                     div.textContent = j;
+                     document.body.append(div) 
+                    }
+                }
+             
+           
             }
             
-        }
-
-       
-        
-        getDayWeek(days, busyDays);
 
         
 
